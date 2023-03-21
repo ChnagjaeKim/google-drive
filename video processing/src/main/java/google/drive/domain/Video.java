@@ -33,7 +33,7 @@ public class Video {
         return videoRepository;
     }
 
-    public static void processing(FileUploaded fileUploaded) {
+    public static void processViedo(FileUploaded fileUploaded) {
         /** Example 1:  new item 
         Video video = new Video();
         repository().save(video);

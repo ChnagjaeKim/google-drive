@@ -26,15 +26,15 @@ public class PolicyHandler {
         value = KafkaProcessor.INPUT,
         condition = "headers['type']=='FileUploaded'"
     )
-    public void wheneverFileUploaded_Indexing(
+    public void wheneverFileUploaded_IndexFile(
         @Payload FileUploaded fileUploaded
     ) {
         FileUploaded event = fileUploaded;
         System.out.println(
-            "\n\n##### listener Indexing : " + fileUploaded + "\n\n"
+            "\n\n##### listener IndexFile : " + fileUploaded + "\n\n"
         );
 
         // Sample Logic //
-        Index.indexing(event);
+        Index.indexFile(event);
     }
 }

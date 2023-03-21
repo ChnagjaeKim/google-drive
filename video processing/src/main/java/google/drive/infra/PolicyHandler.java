@@ -26,15 +26,15 @@ public class PolicyHandler {
         value = KafkaProcessor.INPUT,
         condition = "headers['type']=='FileUploaded'"
     )
-    public void wheneverFileUploaded_Processing(
+    public void wheneverFileUploaded_ProcessViedo(
         @Payload FileUploaded fileUploaded
     ) {
         FileUploaded event = fileUploaded;
         System.out.println(
-            "\n\n##### listener Processing : " + fileUploaded + "\n\n"
+            "\n\n##### listener ProcessViedo : " + fileUploaded + "\n\n"
         );
 
         // Sample Logic //
-        Video.processing(event);
+        Video.processViedo(event);
     }
 }

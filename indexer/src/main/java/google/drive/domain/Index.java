@@ -34,7 +34,7 @@ public class Index {
         return indexRepository;
     }
 
-    public static void indexing(FileUploaded fileUploaded) {
+    public static void indexFile(FileUploaded fileUploaded) {
         /** Example 1:  new item 
         Index index = new Index();
         repository().save(index);
